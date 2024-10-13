@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const loginBtn = document.querySelector(".login-btn");
   const usernameInput = document.querySelector(".username-input");
   const passwordInput = document.querySelector(".pass-input");
-  const baseUrl = "https://chatmir-v001.vercel.app";
+  const baseUrl = "https://chatmir-v001.vercel.app/";
 
   // display chat-box
   const displayChat = () => {
