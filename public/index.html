@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Box</title>
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <script defer type="module" src="./javascripts/client.js"></script>
+  </head>
+  <body>
+    <div class="login-container">
+      <h1>Login</h1>
+      <form>
+        <label>Username</label>
+        <input
+          class="login-input username-input"
+          type="text"
+          id="username"
+          required
+        />
+        <label>Password</label>
+        <input
+          class="login-input pass-input"
+          type="password"
+          id="password"
+          required
+        />
+        <button class="login-btn" id="post">Login</button>
+      </form>
+    </div>
+    <div class="chat-box">
+      <div class="chat-header">
+        <h2>Chat</h2>
+      </div>
+      <div class="chat-body">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <div class="message received">
+                  <p>سلام خوبی؟ چندتا؟</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="message received">
+                  <p>سلام خوبی؟ چندتا؟</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="message sent">
+                  <p>
+                    سلام خوبی؟ چندتا؟ خوبم سلامتی . تست تست تست تست از همه زنگ
+                    سرتو با چی میشوری؟
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <div class="message received">
+          <p>سلام خوبی؟ چندتا؟</p>
+        </div>
+        <div class="message sent">
+          <p>سلام بهتری؟</p>
+        </div> -->
+      </div>
+      <div class="chat-footer">
+          <!-- <textarea
+          class="input-message"
+          type="text"
+          placeholder="Type a message..."
+          </textarea> -->
+          <textarea
+            name=""
+            id="input-message"
+            placeholder="پیام خود را بنویسید"
+          ></textarea>
+          <button class="send-message">Send</button>
+      </div>
+    </div>
+  </body>
+</html>

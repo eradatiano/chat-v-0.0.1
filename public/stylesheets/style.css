@@ -1,0 +1,203 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1b1a55;
+  margin: 0;
+}
+/* tr {
+  display: block;
+} */
+
+.chat-box {
+  max-width: fit-content;
+  height: 98%;
+  background-color: #181045;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  display:none;
+  /* position: relative; */
+}
+
+.chat-header {
+  padding: 10px;
+  background-color: #2e236c;
+  color: #dbbfe9;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.message {
+  background-color: #433d8b;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 70%;
+  color: #dbbfe9;
+  text-align: right;
+  display: block;
+}
+
+.received {
+  /* align-self: flex-start; */
+  float: left;
+}
+
+.sent {
+  /* align-self: flex-end; */
+  /* position: absolute; */
+  float: right;
+  right: 10px;
+}
+
+.chat-footer {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #17153b;
+}
+
+.chat-footer textarea {
+  background-color: #433d8b;
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #17153b;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-align: right;
+  color: #dbbfe9;
+}
+
+.chat-footer button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #dbbfe9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-footer button:hover {
+  background-color: #0056b3;
+}
+
+/* Login */
+.login-container {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #6200ea;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #3700b3;
+}
+
+/* .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.login-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.textbox {
+  margin-bottom: 20px;
+}
+
+.textbox input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .login-box {
+  background-color: #444;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .textbox input {
+  background-color: #555;
+  border: 1px solid #666;
+  color: #fff;
+}
+
+.dark-mode .btn {
+  background-color: #555;
+}
+
+.dark-mode .btn:hover {
+  background-color: #777;
+} */
+
