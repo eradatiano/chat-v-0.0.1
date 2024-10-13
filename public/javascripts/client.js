@@ -1,4 +1,3 @@
-// export const client = {
 window.addEventListener("DOMContentLoaded", function () {
   const chatBox = document.querySelector(".chat-box");
   const tbody = document.querySelector("tbody");
@@ -19,11 +18,9 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Display Message Function
   const displayMessage = function (message, id) {
-    // if (message.trim().length === 0) return;
     // specify message status
     let status = "received";
     if (id === userId) status = "sent"; // determine the status by userId
-    // else id = "sent";
 
     // fill divMessage and add it to html
     const divMessage = `<tr>
@@ -55,7 +52,7 @@ window.addEventListener("DOMContentLoaded", function () {
     readMessages();
     
   };
-  // send info to server ali1727mir
+  // send info to server
   const postInfo = async function (username, userId) {
     const res = await fetch(baseUrl + "login", {
       method: "Post",
@@ -124,32 +121,12 @@ window.addEventListener("DOMContentLoaded", function () {
       .then((res) => res.body.getReader())
       .then(messageLoading);
   };
-  // mir2717mir
-  // ali1727mir
   const div = document.querySelector("tbody")
   sendMessageBtn.addEventListener("click", function () {
     const message = Message();
     if (message.trim().length === 0) getMessage();
     else sendGetMsg(message);
     setTimeout(() => tbody.scrollIntoView({behavior: "instant", block: "end"}), 100)
-    
-    // displayMessage(message, 1);
   });
 
-  // const scrollingElement = document.querySelector("tbody");
-  // const config = { childList: true };
-  // const callback = function (mutationsList, observer) {
-  //   console.log(mutationsList);
-  //   for (let mutation of mutationsList) {
-  //     if (mutation.type === "childList") {
-  //       scrollingElement.scrollTop = "500px";
-  //     }
-  //   }
-  // };
-  // const observer = new MutationObserver(callback);
-  // observer.observe(scrollingElement, config);
 });
-
-// .then((response) => response.json())
-// .then((data) => console.log("seccess", data))
-// .catch((error) => console.log("error", error));

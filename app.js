@@ -97,9 +97,7 @@ const sendAllMessages = function (userId) {
     .createReadStream(path.join(__dirname, "public/little-db.csv"))
     .pipe(parse())
     .on("data", (row) => {
-      // let isSender = false;
       if (row.length === 0) return;
-      // row[1] === userId && (isSender = true);
       const id = row[1];
 
       const message = row[2];
@@ -129,12 +127,9 @@ const csvFile = new CsvFile({
 app.get("/", (req, res) => {
   res.status(200).sendFile(path.join(__dirname, "public", "index.html"));
 });
-// ali1727mir
 app.post("/login", (req, res) => {
   const { username, userId } = req.body;
-  // console.log(userId);
   if (sendAllMessages(userId)) {
-    // console.log("block running");
     res
       .status(200)
       .sendFile(path.join(__dirname, "public", "allMessages.json"));
@@ -142,7 +137,6 @@ app.post("/login", (req, res) => {
 });
 app.get("/getMsg", (req, res) => { 
   const { userid } = req.headers;
-  // console.log(userid);
   res.status(200).sendFile(path.join(__dirname, "public", "allMessages.json"));
 })
 let a = 0;
@@ -153,27 +147,12 @@ app.post("/send-getMsg", (req, res) => {
   ]);
   if (updateCsv && sendAllMessages(userId)) {
     a++;
-    // console.log(`update ${a}`);
     res
       .status(200)
       .sendFile(path.join(__dirname, "public", "allMessages.json"));
   }
-  // console.log(username, userId, message);
 });
 
 app.listen(3000, () => {
   console.log(`Server running at http://localhost:${3000}/`);
 });
-
-// for (let i = 0; i < 1000; i++) {
-// setInterval(() => {
-// }, 2)
-
-// }
-// const b = fs.createReadStream(path.join(__dirname, "public/test1.csv"))
-//   .pipe(parse())
-//   .on("data", (row) => {
-//     const a = row[2]
-//     return a
-//   });
-// b.then((c) => console.log(c))
