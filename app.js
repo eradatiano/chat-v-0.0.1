@@ -1,6 +1,7 @@
 const express = require("express");
 // const createError = require("http-errors");
 const path = require("path");
+const cors = require("cors");
 // const cookieParser = require("cookie-parser");
 // const logger = require("morgan");
 const csv = require("@fast-csv/format");
@@ -11,6 +12,7 @@ const fs = require("fs");
 // const usersRouter = require("./routes/users");
 
 const app = express();
+app.use(cors())
 app.use(express.json());
 app.use(express.static(__dirname + "/public"));
 
