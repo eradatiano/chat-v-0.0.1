@@ -14,7 +14,7 @@ const fs = require("fs");
 const app = express();
 app.use(cors())
 app.use(express.json());
-app.use(express.static(__dirname + "/public"));
+// app.use(express.static(__dirname + "/public"));
 
 // view engine setup
 // app.set("views", path.join(__dirname, "views"));
@@ -154,7 +154,7 @@ app.post("/send-getMsg", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, "public", "index.html"));
+  // res.status(200).sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.listen(() => {
