@@ -126,16 +126,13 @@ const csvFile = new CsvFile({
   headers: ["username", "userId", "message"],
 });
 
-app.get("/", (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, "public", "index.html"));
-});
 
 app.post("/login", (req, res) => {
   const { username, userId } = req.body;
   if (sendAllMessages(userId)) {
     res
-      .status(200)
-      .sendFile(path.join(__dirname, "public", "allMessages.json"));
+    .status(200)
+    .sendFile(path.join(__dirname, "public", "allMessages.json"));
   }
 });
 app.get("/getMsg", (req, res) => { 
@@ -151,9 +148,13 @@ app.post("/send-getMsg", (req, res) => {
   if (updateCsv && sendAllMessages(userId)) {
     a++;
     res
-      .status(200)
-      .sendFile(path.join(__dirname, "public", "allMessages.json"));
+    .status(200)
+    .sendFile(path.join(__dirname, "public", "allMessages.json"));
   }
+});
+
+app.get("/", (req, res) => {
+  res.status(200).sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.listen(443, () => {
