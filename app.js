@@ -127,6 +127,7 @@ const csvFile = new CsvFile({
 app.get("/", (req, res) => {
   res.status(200).sendFile(path.join(__dirname, "public", "index.html"));
 });
+
 app.post("/login", (req, res) => {
   const { username, userId } = req.body;
   if (sendAllMessages(userId)) {

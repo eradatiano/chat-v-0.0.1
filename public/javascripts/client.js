@@ -9,6 +9,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const usernameInput = document.querySelector(".username-input");
   const passwordInput = document.querySelector(".pass-input");
   const baseUrl = "https://chatmir-v001.vercel.app/";
+  // const baseUrl = "https://chatmir-v001.vercel.app/";
 
   // display chat-box
   const displayChat = () => {
@@ -111,6 +112,7 @@ window.addEventListener("DOMContentLoaded", function () {
       method: "Post",
       headers: {
         "Content-Type": "application/json",
+        "Accept": "application/json"
       },
       body: JSON.stringify({
         username: username,
